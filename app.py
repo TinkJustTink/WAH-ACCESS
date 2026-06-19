@@ -96,7 +96,7 @@ try:
                     st.link_button("🌐 Open Google Maps", maps_url, type="primary")
                 
                 meta1, meta2, meta3 = st.columns(3)
-                meta1.write(f"**Line Side:** {row['ACCESS ON TO LINE']}")
+                meta1.write(f"**Line Side:** {row['ACCESS LINE']}")
                 meta2.write(f"**Road/Street:** {row['ROAD / STREET']}")
                 meta3.write(f"**Coordinates:** `{row['GPS COORDINATES']}`")
                 
