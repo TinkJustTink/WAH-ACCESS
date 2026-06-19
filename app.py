@@ -57,8 +57,8 @@ try:
 
     st.sidebar.markdown("---")
     
-    access_types = ["All"] + sorted(df["ACCESS ON TO LINE"].dropna().unique().tolist())
-    selected_access = st.sidebar.selectbox("Access on to Line", access_types)
+    access_types = ["All"] + sorted(df["ACCESS LINE"].dropna().unique().tolist())
+    selected_access = st.sidebar.selectbox("Access Line", access_types)
     search_query = st.sidebar.text_input("Search Site / Place / Road", "").strip().lower()
     
     if nearest_site_idx is not None:
@@ -67,7 +67,7 @@ try:
     else:
         filtered_df = df.copy()
         if selected_access != "All":
-            filtered_df = filtered_df[filtered_df["ACCESS ON TO LINE"] == selected_access]
+            filtered_df = filtered_df[filtered_df["ACCESS LINE"] == selected_access]
             
         if search_query:
             filtered_df = filtered_df[
