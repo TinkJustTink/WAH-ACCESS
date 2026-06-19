@@ -27,7 +27,7 @@ st.markdown("Interactive site layout and navigation tool.")
 @st.cache_data
 def load_data():
     # 📑 REPLACE THE URL BELOW WITH YOUR GOOGLE DRIVE DIRECT DOWNLOAD URL
-    google_drive_url = "https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_HERE"
+    google_drive_url = "https://drive.google.com/uc?export=download&id=1FNGmhc_N_ncga_sOP_f3TrniENpnk3r0"
     
     df = pd.read_excel(google_drive_url)
     df['DECIMAL_MILES'] = df['MILLAGE'].apply(parse_mileage_to_decimal)
